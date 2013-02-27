@@ -8,13 +8,31 @@ He made a [Django quickstart](http://django-quickstart.herokuapp.com/) app, thus
 
 #### Installation
 
-Let's say all you have installed is Python. Cool. Download [install.sh](https://raw.github.com/garbados/flask-the-gauntlet/master/install.sh) and run it like this:
+Let's say all you have installed is Python. Cool. If you're on Unix, Linux, or otherwise not on Windows, run this to set up the skeleton of a Flask app:
 
-	. ./install.sh
+	easy_install virtualenv
+	mkdir flask_quickstart
+	cd flask_quickstart
+	virtualenv venv
+	source venv/bin/activate
+	pip install flask, markdown
+	pip freeze > requirements.txt
+	mkdir templates static static/css
+	touch app.py templates/index.html static/css/style.css
 
-If you're on Windows, use [install_win.sh](https://raw.github.com/garbados/flask-the-gauntlet/master/install_win.sh) instead. Run it like this:
+If you're on Windows, run this instead:
 
-	.\install_win.sh
+	easy_install virtualenv
+	mkdir the_gauntlet_has_been_thrown
+	cd the_gauntlet_has_been_thrown
+	virtualenv venv
+	venv\Scripts\activate
+	pip install flask, markdown
+	pip freeze > requirements.txt
+	mkdir templates static static\css
+	copy app.py+
+	copy templates\index.html+
+	copy static\css\style.css+
 
 Now you have the skeleton of a Flask application. Whoo!
 
